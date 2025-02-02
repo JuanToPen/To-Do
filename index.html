@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="gradient">
-        <div id="container">
-                <h1>To Do</h1>
-                <div id="interaction">
-                    <input type="text" id="input" placeholder="Add an item"/>
-                    <button class="greenButtons" id="submit">Submit</button>
-                    <button class="redButtons" id="clear">Clear list</button>
-                </div>
-                <ol id="list">
-                <ol>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Añade una nueva tarea">
+            <select id="taskCategory">
+                <option value="carrera">Carrera (Universidad)</option>
+                <option value="trabajo">Trabajo</option>
+                <option value="personal">Personal</option>
+            </select>
+            <button id="addTaskBtn">Añadir Tarea</button>
+        </div>
+        <div class="tasks-section">
+            <div class="category">
+                <h2>Carrera</h2>
+                <ul id="carreraList"></ul>
+            </div>
+            <div class="category">
+                <h2>Trabajo</h2>
+                <ul id="trabajoList"></ul>
+            </div>
+            <div class="category">
+                <h2>Personal</h2>
+                <ul id="personalList"></ul>
+            </div>
         </div>
     </div>
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
