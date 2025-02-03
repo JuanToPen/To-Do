@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>Productivity Todo List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>To-Do List</h1>
+        <h1>Productivity List</h1>
+        
         <div class="input-section">
-            <input type="text" id="taskInput" placeholder="Añade una nueva tarea">
-            <select id="taskCategory">
-                <option value="carrera">Carrera (Universidad)</option>
-                <option value="trabajo">Trabajo</option>
-                <option value="personal">Personal</option>
-            </select>
-            <button id="addTaskBtn">Añadir Tarea</button>
+            <form id="todoForm">
+                <div class="form-group">
+                    <select id="sectionSelect" required>
+                        <option value="">Seleccionar sección</option>
+                        <option value="career">Carrera</option>
+                        <option value="work">Trabajo</option>
+                    </select>
+                    <input type="text" id="taskInput" placeholder="Nueva tarea" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="dueDate">
+                    <button type="submit">Añadir Tarea</button>
+                </div>
+            </form>
         </div>
-        <div class="tasks-section">
-            <div class="category">
-                <h2>Carrera</h2>
-                <ul id="carreraList"></ul>
+
+        <div class="sections-container">
+            <div class="section" id="careerSection">
+                <h2>Carrera 🎓</h2>
+                <div id="careerTasks"></div>
             </div>
-            <div class="category">
-                <h2>Trabajo</h2>
-                <ul id="trabajoList"></ul>
-            </div>
-            <div class="category">
-                <h2>Personal</h2>
-                <ul id="personalList"></ul>
+            
+            <div class="section" id="workSection">
+                <h2>Trabajo 💼</h2>
+                <div id="workTasks"></div>
             </div>
         </div>
     </div>
+
     <script src="index.js"></script>
 </body>
 </html>
