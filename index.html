@@ -12,31 +12,52 @@
         <h1>Tareas</h1>
         
         <div class="input-section">
-            <form id="todoForm">
-                <div class="form-group">
-                    <select id="sectionSelect" required>
-                        <option value="">Seleccionar sección</option>
-                        <option value="career">Carrera</option>
-                        <option value="work">Trabajo</option>
-                    </select>
-                    <input type="text" id="taskInput" placeholder="Nueva tarea" required>
-                </div>
-                <div class="form-group">
-                    <input type="date" id="dueDate">
-                    <button type="submit">Añadir Tarea</button>
-                </div>
-            </form>
+            <input type="text" id="taskInput" placeholder="Nueva tarea...">
+            <select id="sectionSelect">
+                <option value="carrera">Carrera</option>
+                <option value="trabajo">Trabajo</option>
+            </select>
+            <select id="subjectSelect">
+                <option value="CIMA">CIMA</option>
+                <option value="Mates">Mates</option>
+                <option value="Física">Física</option>
+                <option value="Economía">Economía</option>
+                <option value="Informática">Informática</option>
+            </select>
+            <input type="date" id="dueDate">
+            <button onclick="addTask()">Añadir Tarea</button>
         </div>
 
         <div class="sections-container">
-            <div class="section" id="careerSection">
+            <div class="section career-section">
                 <h2>Carrera 🎓</h2>
-                <div id="careerTasks"></div>
+                <div class="subsections">
+                    <div class="subsection CIMA">
+                        <h3>CIMA</h3>
+                        <div class="tasks"></div>
+                    </div>
+                    <div class="subsection Mates">
+                        <h3>Mates</h3>
+                        <div class="tasks"></div>
+                    </div>
+                    <div class="subsection Física">
+                        <h3>Física</h3>
+                        <div class="tasks"></div>
+                    </div>
+                    <div class="subsection Economía">
+                        <h3>Economía</h3>
+                        <div class="tasks"></div>
+                    </div>
+                    <div class="subsection Informática">
+                        <h3>Informática</h3>
+                        <div class="tasks"></div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="section" id="workSection">
+
+            <div class="section work-section">
                 <h2>Trabajo 💼</h2>
-                <div id="workTasks"></div>
+                <div class="tasks"></div>
             </div>
         </div>
     </div>
